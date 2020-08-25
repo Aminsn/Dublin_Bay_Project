@@ -1,4 +1,4 @@
-# Dublin_Bay_Project
+# Dublin Bay Project
 
 Check the "Paper_final.Rmd" file for re-generating the paper "RECENT SEA LEVEL RISE ON IRELAND’S EAST COAST BASED ON MULTIPLE TIDE GAUGE ANALYSIS" outputs. 
 
