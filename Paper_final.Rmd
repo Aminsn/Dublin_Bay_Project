@@ -1,0 +1,809 @@
+---
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+editor_options: 
+  chunk_output_type: console
+bibliography: /Users/amin/Documents/library.bib  
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      cache = TRUE,
+                      warning = FALSE, 
+                      message = FALSE, 
+                      fig.align = "center")
+```
+
+# RECENT RAPID SEA LEVEL RISE IN DUBLIN BAY BASED ON TIDE GAUGE ANALYSIS
+
+# ABSTRACT
+
+We analysed tide gauges at Dublin port and its environs over the period 1938-2018. With three different tide gauges in the vicinity of the main Dublin port gauge, we merged the data sets and validated them against each other. The recordings of all four tide gauges were found to be in good agreement between 2003-2015, though this was markedly less so from 2016 to the present. We estimate the sea level rise in Dublin port for this period at 7.8 mm yr-1. The rate over the longer period of 1938-2015 was 1.67 mm yr-1 which is in good agreement with the global average. We found that the rate of sea level rise in Dublin is cyclic with some extreme upward and downward trends. However, starting around 1980, Dublin has seen significantly higher rates that have been always positive since 1996. Furthermore, our analysis of the tide gauges indicates an increase in sea level variability since 1980. Both decadal rates and continuous in time rates are calculated and provided in this paper. 
+
+# INTRODUCTION
+
+Global mean sea level is rising due to anthropogenic climate change [@ipcc]. However, this rise is not occurring at the same rate everywhere. Understanding regional sea level trends is crucial for local and regional adaptation and the development of effective climate action plans. In Ireland, Dublin is the largest city with a population of approximately 1.3 million [@population] and is situated at the mouth of the river Liffey on the Irish Sea coast. Dublin also has the Republic of Ireland’s longest record of sea level with tide gauge data from Dublin Port (also called Dublin North Wall) publicly available from 1938 onwards. Understanding changes in mean sea level at Dublin is key for the protection of Ireland’s largest city and, from a national perspective, in understanding long-term sea level rise (SLR) in Ireland [@dcc]. 
+
+Sea level around Ireland rose rapidly from the last glacial maximum 20000 years ago, cutting Ireland off as an island 16000 years ago [@Edwards2017]. Regionally, sea levels in Ireland stabilised by the 20th century after which sea levels began to increase due with  anthropogenic-induced warming [@ipcc]. The importance of climate warming and SLR in Ireland has been emphasized by a number of authors: @Kiely1999 provided evidence of an increase in annual precipitation after 1975 and reported more extreme climatic events happening since then, which could be associated with the increase in North Atlantic oscillation. The risks of these events and the ways Ireland should be prepared for them are discussed in @Devoy2008. @Dwyer2012 states that satellite observations show sea levels rising around Ireland at a rate of 2–3 mm year-1, in line with global averages. However, the tide gauge record in Dublin showed a rate of 0.3 mm yr-1 in sea level from 1938 to 2000 [@dcc], much lower than global averages. We augment that analysis by including the most recent data available with more sophisticated data analysis and modelling techniques. 
+
+A number of authors have investigated trends in the Dublin Port tide gauge prior to the year 2000, finding similarly low rates of change. @Carter1982 investigated Dublin’s SL record using tide gauge measurements and reported a rising trend of 0.6 mm yr-1 before 1961 and a falling trend of -0.3 mm yr-1 from then until 1980. @Woodworth1991 and @Woodworth1999 estimated trends of 0.17 ($\pm$ 0.35) from 1938–1988, and 0.23 mm yr-1 from 1938–1996. In stark contrast to these low rates of SLR, the recently published climate change action plan for 2019–2024 by @acplan, reports 6-7 mm yr-1 SLR between the years 2000 and 2016. This rate is approximately double the rates of global mean sea level rise [@Nerem2018] and particularly surprising given the earlier rates of rise in Dublin were much lower than global mean sea level rise over similar periods [@Dangendorf2017].
+
+The goal of this paper is to further investigate the Dublin’s sea level trend, through careful assembly and quality control of the Dublin Port records and by comparing sea level records collected from four nearby tide gauges, in order to assess SLR in the region. We find that the four gauges are in strong agreement for the period 2003-2015 though show varying degrees of SLR. Beyond 2016 the Dublin port gauge does not agree with the others and so we do not use those for further analysis. 
+
+The rest of this paper is organized as follows. In the Methods section, a detailed description of the data used in this study will be introduced. The Results section provides a thorough analysis of the Dublin port’s sea level trend. Some issues and concerns pertaining to the reliability of the findings have been discussed in the Discussion section. Finally, the important findings of this study are summarized in the Conclusion section.
+
+# METHODS
+In this section, a detailed description of the data used for the analyses will be introduced in conjunction with an explanation of how the data is prepared and validated. 
+
+### Data Description
+Dublin bay's monthly mean high and low water, mean tide level, and, where available, mean sea level from 1938 to 2018 were compiled from different sources: 
+
+1.	Annual high and low water from @Woodworth1991 for the period 1938 to 1988. This is based on annual tabulations made by the Dublin Port Authority. Data from 1938-77 are relative to Port Datum, which is 0.436 m above the Ordnance Survey Datum Dublin (Poolbeg Datum).
+
+2.	Monthly mean high and low water levels were digitized as part of this study for the period of 1987–2001. Quality control measures for digitization included automatic checking of the calculated and recorded mean levels. Overlapping years with the data of @Woodworth1991 were used to compare agreement with the older dataset. There was approximately a 1 cm difference between high water values. Low water values agreed to within accuracy (O(1 mm)). Datum are reported relative to LAT.
+
+3.	High frequency (10 minute) data were supplied by @psmsl for the period 2001–2009. These data were provided to PSMSL by the Harbour Master in Dublin Port following a change in responsible authority in 2001. Data have a low vertical resolution of 0.1 m. These digital data are reported relative to LAT.
+
+4.	High frequency (5 minute) data are available from the Irish National Tide Gauge Network (NTGN) for the period 2006–2017 via the Irish Marine Institute website [@imi]. Data are reported relative to Ordnance Datum Malin (ODM) and (LAT). The vertical distance between ODM and LAT for the NTGN data is 2.811 m. This is unrelatable to any of the other ODM to LAT conversions (Figure 1) and hence this value will not be discussed further. All NTGN data are taken relative to ODM in this study.
+
+5.	5.	High water levels for the period 1968–2013 were digitized as part of this study (hereafter the Greene dataset).
+
+Between the period 1968-1982, data was supplied in the format of photographs, these photos were of tidal charts, where high water values were easily read from. Between 1983-2003 data were in the format of hard copy tidal chart. The hard copy consisted of 3 large A3 books of charts, these were also supplied to be read off. Remaining data from 2003–2013 were digital data.  These were manipulated in order to select the two high tides for each day. 
+
+Digitisations began in 1998, therefore before this point, the high tide values for each day were extracted from the tidal charts. This was completed by the generation of tables for each year, with two available cells for each day, these values were read off and inputted into the designated cell. The data from the period 1968-1976 was converted from feet and inches to meters. Data post 1998 was already digitised and was measured in 15minute time intervals, post 2004 this data’s accuracy increased to 1minute intervals. To locate the two high tides, each month was split into days, sorted with the highest value being extracted for high tide 1. The second-high tide occurred between 12 and 13 hours after the first high tide, therefore by using the time component within the data set, this value was extracted. 
+
+This digitisation was limited to post-1968 as between the years 1963-1967 data was not recorded, therefore to produce a yearly consecutive analysis, data from 1968- 2013 were digitised. Sparse periods of data were unavailable due to machine malfunction within the 48-year sequence, these data were omitted. 
+
+*Table 1- Details of the data used to study Dublin port’s sea level rise.*
+
+### Datum reconciliation
+
+*Figure 1: A schematic representation of the different versions of datum definitions. **The 2.811 m conversion from LAT to ODM was not reconcilable with other datums.*
+
+Difficulties in merging these datasets into a single consistent dataset emerge due to differing datum definitions. Figure 1 shows four different versions of the datum definitions for the Dublin tide gauge as provided by PSMSL, the Irish Institute for Surveyors (IIS), Dublin Port Authority, and the Marine Institute. 
+
+The tabulated annual and monthly data are relative to the same datum and overlapping data confirm that the definitions agree to within 1 cm. These data have the same source and therefore agreement is expected. There is no overlap between these data and the Port Authority dataset supplied to PSMSL from 2002 to 2009. 
+
+Four years of overlap exists between the Port Authority dataset and the NTGN dataset from 2006 to 2009. Comparisons of monthly mean high water (MHW), monthly mean low water (MLW), mean tide level (MTL) and mean sea level (MSL) are shown in Figure 2. Port Authority data are given relative to LAT datum; NTGN data are relative to ODM. MTL and MSL differences agree to the nearest millimeter, giving a value of 2.599 m. However, there is a systematic underestimation of MHW and MLW in the Port Authority dataset due to its lower vertical resolution. These data have an accuracy of 0.1 m and so would be expected to underestimate the extremes by about half this accuracy. The underestimation as determined from the overlap with the NTGN data is 0.044 m. 
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+library(Jmisc)
+library(tidyverse)
+library(gganimate)
+library(reshape2)
+library(mgcv)
+library(magrittr)
+library(multipanelfigure)
+
+rm(list = ls())
+setwd("/Users/amin/Desktop/PhD")
+# load the two processed datasets
+dub.ntgn = read.csv('Data/dub_mon_2007_to_2018.csv',header=TRUE)
+dub.andy = read.csv('Data/dub_mon_2002_to_2010.csv',header=TRUE)
+
+# can get the first datum offset at this stage
+dub.mod.merge <- merge(dub.ntgn,dub.andy,by=c("dyear"),all.x=FALSE,all.y=FALSE)
+# remove the all.x or all.y to just get overlaps
+
+ggplot() +
+        geom_line(data = dub.mod.merge, aes(dyear, mtl.x - mtl.y), col = "black") +
+        geom_line(data = dub.mod.merge, aes(dyear, mhw.x - mhw.y), col = "blue") +
+        geom_line(data = dub.mod.merge, aes(dyear, mlw.x - mlw.y), col = "red") +
+        geom_line(data = dub.mod.merge, aes(dyear, msl.x - msl.y), col = "green") +
+        theme_bw() +
+        labs(y= "Sea Level Diff. (m)", x = "Year") +
+        theme(axis.title=element_text(size=15,face="bold"),
+        axis.text.x = element_text(hjust = 1,size = 12)) 
+  
+```
+*Figure 2: NTGN minus Port Authority data: MHW (blue), MSL (black), MTL (green) and MLW(red).*
+
+The vertical difference of 2.599 m between NTGN ODM and Port Authority LAT can be interpreted in terms of Figure 1. The Port Authority provides a datum diagram with a vertical distance of 2.61 m between ODM and LAT. This agrees with the derived difference of 2.599 m to within 1 cm.
+
+Figure 3 depicts how Dublin’s SL data from different sources are aggregated. No overlaps exist between the Port Authority dataset and the earlier tabulated data. The HW dataset overlaps both but, due to the low vertical resolution of the Port Authority dataset, cannot be used to relate datums. We can however use it to bridge the gap to the NTGN dataset.
+
+```{r}
+dub.highs = read.csv('Data/All_data.csv')
+
+dub.highs$Date <- as.POSIXlt(dub.highs$Date, format = "%d/%m/%Y")
+dub.highs$Year <- dub.highs$Date$year + 1900
+dub.highs$Month <- dub.highs$Date$mon + 1
+# get rid of the ringsend data post 2013
+dub.highs[dub.highs$Year>"2012",2]<-NA
+
+# monthly averages
+dub.mhw <- aggregate(Height~Month+Year,dub.highs,mean)
+dub.mhw$dyear <- dub.mhw$Year + (dub.mhw$Month - 0.5)/12
+
+# number of high waters identified
+dub.nhw <- aggregate(Height~Month+Year,dub.highs,length)
+dub.mhw$nhw <- dub.nhw$Height
+
+# load the long data
+dub.long <- read.csv('Data/Digitised_1990_2001_GDM.csv',header=TRUE)
+names(dub.long) <- c("month","year","mhw","mlw","mtl")
+dub.long[dub.long$mtl==-99999,3:5] <- NA
+dub.long$dyear <- dub.long$year + (dub.long$month-.5)/12
+# or load the monthly stuff
+ggplot() +
+        geom_line(data = dub.long, aes(dyear, mhw), col = 'red') +
+        geom_line(data = dub.mhw, aes(dyear, Height-0.008), col = 'blue') +
+        geom_line(data = dub.ntgn, aes(dyear, mhw+2.599), col = 'black') +
+        geom_line(data = dub.andy, aes(dyear, mhw), col = 'green') +
+        theme_bw() +
+        labs(x = "Year", y = "Sea Level (m)") +
+        theme(axis.title=element_text(size=15,face="bold"),
+        axis.text.x = element_text(hjust = 1,size = 12))
+```
+*Figure 3: Linking of tabulated (blue), Port Authority (green) and NTGN (black) dataset using the MHW dataset of Greene (red).*
+
+Using the value of 2.599 m to convert NTGN ODM data to LAT, we find a residual 0.008 m difference to the HW dataset. The same offset is found relating the HW dataset to the monthly tabulated data. We conclude that this difference is likely due to a datum accuracy where PSMSL quote a value of 0.238 m between Port Datum and LAT, and IIS and Port Authority quote this distance as 0.23 m. We add 8 mm to the Greene dataset as the final datum adjustment. A reconciled Dublin datum figure is shown in Figure 4.  
+
+*Figure 4: Reconciled datum diagram for Dublin.*
+
+### A monthly mean high and low water, mean tide and sea level dataset
+Due to the systematic underestimation of the Port Authority dataset of high waters, we supplement the monthly averages of the high waters from the Green dataset for the period 2002–2006 and calculate mean low waters by combining this mean high water with the mean tide level. A reconciled monthly dataset for the Dublin sea level 1987–2017 is shown in Figure 5 and an annual dataset from 1938–2017 is shown in Figure 6.
+
+```{r}
+#load alice green's data and the long merged record
+dub.highs$Date <- as.POSIXlt(dub.highs$Date, format = "%d/%m/%Y")
+dub.highs$Year <- dub.highs$Date$year + 1900
+dub.highs$Month <- dub.highs$Date$mon + 1
+# get rid of the ringsend data post 2013
+dub.highs[dub.highs$Year>"2012",2]<-NA
+
+# monthly averages
+dub.mhw <- aggregate(Height~Month+Year,dub.highs,mean)
+dub.mhw$dyear <- dub.mhw$Year + (dub.mhw$Month - 0.5)/12
+
+# load the long data
+names(dub.long) <- c("month","year","mhw","mlw","mtl","time")
+#dub.long[dub.long$mtl == -99999, 3:5] <- NA
+dub.long$dyear <- dub.long$year + (dub.long$month-.5)/12
+
+# maybe it is rbind, could set up dub.long, dub.andy, dub.ntgn to all have same names and not overlap
+dub.long <- dub.long[c("year","month","dyear","mhw","mlw","mtl")]
+dub.long$msl <- NA
+
+
+dub.andy <- dub.andy[c("year","month","mtl","msl")]
+# add mhw from alice's data
+names(dub.mhw) <- c("month","year","mhw","dyear")
+dub.andy <- merge(dub.andy,dub.mhw,by=c("year","month"),all.x = TRUE,sort = FALSE)
+dub.andy$mhw <- dub.andy$mhw - 0.008
+dub.andy$mlw <- 2*dub.andy$mtl - dub.andy$mhw
+dub.andy <- dub.andy[dub.andy$dyear < 2007.208,]
+dub.andy <- dub.andy[c("year","month","dyear","mhw","mlw","mtl","msl")]
+
+
+dub.ntgn <- dub.ntgn[c("year","month","dyear","mhw","mlw","mtl","msl")]
+dub.ntgn[c("mhw","mlw","mtl","msl")] <- dub.ntgn[c("mhw","mlw","mtl","msl")]+2.599
+dub.ntgn <- dub.ntgn[dub.ntgn$year<2018,]
+
+dub.merge.final <- rbind(dub.long,dub.andy,dub.ntgn)
+
+ggplot() +
+        geom_line(data = dub.merge.final, aes(dyear, mtl), col = "red") +
+        geom_line(data = dub.merge.final, aes(dyear, msl), col = 'blue') +
+        geom_line(data = dub.merge.final, aes(dyear, mhw), col = 'black') +
+        geom_line(data = dub.merge.final, aes(dyear, mlw), col = 'green') +
+        theme_bw() +
+        labs(x = 'Year', y = "Sea Level [m LAT]") +
+        guides(color = guide_legend(title=NULL)) +
+        theme(axis.title=element_text(size=15,face="bold"),
+        axis.text.x = element_text(hjust = 1,size = 12))
+
+```
+*Figure 5: Reconciled Monthly Dublin dataset as part of this work: MHW (black), MTL (red), MSL (blue), MLW (green) for Dublin.*
+
+```{r}
+dub.merge.final <- round(dub.merge.final,3)
+
+# if there are 11 or 12 monthly mean values available then an annual mean should be calculated.
+#
+dub.merge.ann <- aggregate(cbind(mhw,mlw,mtl)~year,dub.merge.final,
+                          function(x) ifelse(sum(is.na(x))<3,mean(x,na.rm = TRUE),NA),
+                          na.action = na.pass) # won't work without this
+
+
+# load the long one now
+dub.tab = read.csv("Data/tabulated_data_1938_to_2001.csv")
+names(dub.tab) <- c("year","mtl","mhw","mlw")
+dub.tab[,2:4] <- dub.tab[,2:4]/1000 # convert to m
+dub.tab <- dub.tab[dub.tab$year<1987,c("year","mhw","mlw","mtl")] #re-order, remove post 87
+# merge
+dub.merge.ann <- rbind(dub.tab,dub.merge.ann)
+
+# plot final dataset
+ggplot() +
+        geom_line(data = dub.merge.ann, aes(year, mtl), col = "black") +
+        geom_line(data = dub.merge.ann, aes(year, mhw), col = "blue") +
+        geom_line(data = dub.merge.ann, aes(year, mlw), col = "red") +
+        theme_bw() +
+        labs(x = "Year", y = "Sea Leve (m LAT)") +
+        theme(axis.title=element_text(size=15,face="bold"),
+        axis.text.x = element_text(hjust = 1,size = 12))
+```
+*Figure 6: Annual Dublin dataset generated from the monthly dataset: MHW (blue), MTL (black), MLW (red) for Dublin.*
+
+Data published on the PSMSL website show a distinct jump in 2002. The inspection of the data shows that data prior to 2002 were MTL and from 2002–2009 were MSL. Comparisons of MSL with MTL using the NTGN dataset yield a difference of 0.049 m, which is in line with the results of Woodworth (2017). This explains much of the apparent jump in the PSMSL dataset. 
+
+### Further investigation of 2001-2 transition
+As an additional check of the datum of the Port Authority 2001–2009 datum, a comparison was made with one month of paper chart data. Paper chart data are stored from 1982–2003. In many years, the original operator noted daily high and low water values on the paper chart.
+
+These data were digitized for the month of January 2003. Recalling the issues of underestimation of highs and lows for the low vertical resolution of the digital data during this period, MTL was calculated daily and compared. The results showed a difference of 0.011 m. This is within the accuracy of the datums and was taken as additional assurance of the consistency of datum between the tabulated and digital data.
+
+### Trends in nearby gauges
+
+In order to check the reliability of Dublin port’s data, measurements of three different tide gauges that are relatively close to the one at Dublin port with being maximum of 60 km away are analyzed. The time series have different time spans and different frequencies. Details of the datasets are provided in table 2.
+
+*Table 2- Details of the datasets used to check the validity of Dublin port’s data.*
+
+Each of these datasets and Dublin NTGN data were linearly interpolated to hourly resolution. To remove the main tidal frequencies, Doodson’s filter [@pugh1987] is applied before calculating daily means. Subsequently, monthly means are calculated by averaging the daily values for each month. figure 7 shows the monthly sea level means shifted and plotted for visualization.
+<!-- figure 8 shows the four time series, shifted for observational purposes, with daily resolutions.   -->
+
+\vspace{5mm}
+
+```{r}
+arklow <- read.delim("Data/arklow.txt", stringsAsFactors=FALSE)
+port_oriel <- read.delim("Data/port_oriel.txt", stringsAsFactors=FALSE)
+dublin_port <- read_csv("Data/dublin_port_20191008.csv")
+howth_harbour <- read_csv("Data/howth_harbour.csv")
+dublin_1987 <- read_csv("Data/dub_mon_1987_to_2017.csv")
+
+arklow$Quality <- NULL
+port_oriel$Quality <- NULL
+
+#Correcting time:
+arklow$time <- as.POSIXct(arklow$time, format = "%Y/%m/%d %H:%M:%S", tz = "UTC")
+port_oriel$time <- as.POSIXct(port_oriel$time, format = "%Y/%m/%d %H:%M:%S", tz = "UTC")
+
+#Filling missing values function:
+Impute <- function(x){for (i in 1:nrow(x)) {
+  if (is.na(x[i,2])){
+
+    x[i,2] <- mean(c(x[i+1,2],x[i-1,2]))
+  }
+}
+    return(x)
+}
+
+#Doodson's filter function:
+fDoodson <- function(x) {
+  #Defining the Doodson filter's constants:
+  f <- c(2, 1, 1, 2, 0, 1, 1, 0, 2, 0, 1, 1, 0, 1, 0, 0, 1, 0,1)
+  n <- NULL #defining a variable
+  xf <- rep(NA, length(x)) #defining the filtered variable
+
+  for (t in 20:(length(x) - 19)) { #starting from the 20th obvervation to be filtered (excluding the first ones)
+    for (i in 1:19) { #The sigma function
+
+      n[i] <- f[i] * (x[t + i] + x[t - i])
+
+    }
+
+    xf[t]  <- sum(n)
+
+
+  }
+  return(xf/30)
+}
+##End of the functions
+#Data prepration:
+names(dublin_port)[6] <- "level"
+names(howth_harbour)[5] <- "level"
+dublin_port[,c(1,2,4,5,7)] <- NULL
+howth_harbour[,c(1,2,4,6)] <- NULL
+
+#Preparing dublin_1987 to be merged with Dublin's monthly data:
+dublin_1987$time <- as.Date(with(dublin_1987, paste(year, month, 1,sep="-")), "%Y-%m-%d")
+dublin_1987[,c(1:3)] <- NULL
+dublin_1987.fit <- lm(msl ~ mhw + mlw , data = dublin_1987)
+dublin_1987$msl[is.na(dublin_1987$msl)] <- predict(dublin_1987.fit, newdata = dublin_1987[which(is.na(dublin_1987$msl)), ])
+dublin_1987.fit2 <- lm(msl ~ mhw , data = dublin_1987)
+dublin_1987$msl[is.na(dublin_1987$msl)] <- predict(dublin_1987.fit2, newdata = dublin_1987[which(is.na(dublin_1987$msl)), ])
+dublin_1987 <- dublin_1987[,c(5,4)]
+names(dublin_1987)[2] <- "filtered_level"
+dublin_1987 <- dublin_1987 %>% mutate(id = "Dublin_port")
+dublin_1987$filtered_level <- dublin_1987$filtered_level - 1.599
+
+#Shiftting levels:
+arklow$level <- arklow$level + 0.5
+dublin_port$level <- dublin_port$level + 1
+howth_harbour$level <- howth_harbour$level + 1.5
+port_oriel$level <- port_oriel$level + 2
+
+#Subsetting hourly:
+#Dublin port
+t1 <- as.POSIXct("2007-03-20 07:00:00", tz = "UTC")
+t2 <- as.POSIXct("2019-02-20 15:50:00", tz = "UTC")
+tseq <- as.data.frame(seq(from = t1, to = t2, by = "hour"))
+names(tseq) <- 'time'
+
+x <- full_join(tseq, dublin_port)
+dublin <- dplyr::arrange(x, time)
+dublin <- Impute(dublin)
+
+dublin_hourly <- inner_join(tseq, dublin)
+
+#Howth_horbour
+t1 <- as.POSIXct("2006-10-24 12:00:00", tz = "UTC")
+t2 <- as.POSIXct("2019-02-20 15:50:00", tz = "UTC")
+tseq <- as.data.frame(seq(from = t1, to = t2, by = "hour"))
+names(tseq) <- 'time'
+
+x <- full_join(tseq, howth_harbour)
+howth <- dplyr::arrange(x, time)
+howth <- Impute(howth)
+
+howth_hourly <- inner_join(tseq, howth)
+
+#Arklow
+t1 <- as.POSIXct("2003-08-26 00:00:00", tz = "UTC")
+t2 <- as.POSIXct("2019-02-01 00:00:00", tz = "UTC")
+tseq <- as.data.frame(seq(from = t1, to = t2, by = "hour"))
+names(tseq) <- 'time'
+
+ark_hourly <- left_join(tseq, arklow)
+
+#Port_Oriel
+t1 <- as.POSIXct("2007-04-17 09:00:00", tz = "UTC")
+t2 <- as.POSIXct("2019-02-01 00:00:00", tz = "UTC")
+tseq <- as.data.frame(seq(from = t1, to = t2, by = "hour"))
+names(tseq) <- 'time'
+
+oriel_hourly <- left_join(tseq, port_oriel)
+
+#Applying Doodson's filter:
+Filtered_level <- fDoodson(dublin_hourly$level)
+dublin_hourly$filtered_level <- Filtered_level
+
+Filtered_level <- fDoodson(howth_hourly$level)
+howth_hourly$filtered_level <- Filtered_level
+
+Filtered_level <- fDoodson(ark_hourly$level)
+ark_hourly$filtered_level <- Filtered_level
+
+Filtered_level <- fDoodson(oriel_hourly$level)
+oriel_hourly$filtered_level <- Filtered_level
+
+#Calculating daily means:
+howth_daily <- howth_hourly %>%
+  group_by(time = as.Date(format(time, "%Y-%m-%d"))) %>%
+  filter(sum(is.na(filtered_level)) < 5) %>%
+  summarise(filtered_level = mean(filtered_level, na.rm = T))
+
+dublin_daily <- dublin_hourly %>%
+  group_by(time = as.Date(format(time, "%Y-%m-%d"))) %>%
+  filter(sum(is.na(filtered_level)) < 5) %>%
+  summarise(filtered_level = mean(filtered_level, na.rm = T))
+
+ark_daily <- ark_hourly %>%
+  group_by(time = as.Date(format(time, "%Y-%m-%d"))) %>%
+  filter(sum(is.na(filtered_level)) < 5) %>%
+  summarise(filtered_level = mean(filtered_level, na.rm = T))
+
+oriel_daily <- oriel_hourly %>%
+  group_by(time = as.Date(format(time, "%Y-%m-%d"))) %>%
+  filter(sum(is.na(filtered_level)) < 5) %>%
+  summarise(filtered_level = mean(filtered_level, na.rm = T))
+
+howth_daily <- howth_daily %>% mutate(id = "Howth_harbour")
+dublin_daily <- dublin_daily %>% mutate(id = "Dublin_port")
+ark_daily <- ark_daily %>% mutate(id = "Arklow")
+oriel_daily <- oriel_daily %>% mutate(id = "Oriel_port")
+
+#Calculating monthly means:
+howth_monthly <- howth_daily %>% 
+  group_by(time = floor_date(time, "month")) %>% 
+  filter(length(filtered_level) > 15) %>% 
+  summarise(filtered_level = mean(filtered_level), id = max(id))
+
+t1 <- as.Date("2003-03-01", tz = "UTC")
+t2 <- as.Date("2020-02-01", tz = "UTC")
+tseq <- as.data.frame(seq(from = t1, to = t2, by = "month"))
+names(tseq) <- 'time'
+
+howth_monthly <- full_join(tseq, howth_monthly)
+# h1 <- dplyr::arrange(x, time)
+# 
+# howth_monthly <- inner_join(tseq, h1)
+
+#############################################
+dublin_monthly <- dublin_daily %>% 
+  group_by(time = floor_date(time, "month")) %>% 
+  filter(length(filtered_level) > 15) %>% 
+  summarise(filtered_level = mean(filtered_level), id = max(id))
+
+dublin_monthly <- rbind(dublin_1987[201:243,],dublin_monthly)
+dublin_monthly <- na.omit(dublin_monthly)
+# 
+t1 <- as.Date("2003-03-01", tz = "UTC")
+t2 <- as.Date("2020-02-01", tz = "UTC")
+tseq <- as.data.frame(seq(from = t1, to = t2, by = "month"))
+names(tseq) <- 'time'
+ 
+ dublin_monthly <- full_join(tseq, dublin_monthly)
+# d1 <- dplyr::arrange(x, time)
+# 
+# dublin_monthly <- inner_join(tseq, d1)
+
+#############################################
+ark_monthly <- ark_daily %>% 
+  group_by(time = floor_date(time, "month")) %>% 
+  filter(length(filtered_level) > 15) %>% 
+  summarise(filtered_level = mean(filtered_level), id = max(id))
+
+ t1 <- as.Date("2003-09-01", tz = "UTC")
+ t2 <- as.Date("2020-01-01", tz = "UTC")
+ tseq <- as.data.frame(seq(from = t1, to = t2, by = "month"))
+ names(tseq) <- 'time'
+ 
+ ark_monthly <- full_join(tseq, ark_monthly)
+
+############################################
+oriel_monthly <- oriel_daily %>% 
+  group_by(time = floor_date(time, "month")) %>% 
+  filter(length(filtered_level) > 15) %>% 
+  summarise(filtered_level = mean(filtered_level), id = max(id))
+
+ t1 <- as.Date("2002-03-01", tz = "UTC")
+ t2 <- as.Date("2020-02-01", tz = "UTC")
+ tseq <- as.data.frame(seq(from = t1, to = t2, by = "month"))
+ names(tseq) <- 'time'
+ 
+ oriel_monthly <- full_join(tseq, oriel_monthly)
+oriel_monthly$filtered_level[which.min(oriel_monthly$filtered_level)] <- NA
+oriel_monthly$filtered_level[which.min(oriel_monthly$filtered_level)] <- NA
+#Combining daily sets:
+daily_data <- rbind(howth_daily, dublin_daily, ark_daily, oriel_daily)
+
+
+#Plotting the combined sets:
+p <- ggplot() + 
+  geom_line(data = ark_monthly, aes(x = time, y = filtered_level, colour = "red")) +
+  geom_line(data = howth_monthly, aes(x = time, y = filtered_level, color = "Howth harbour")) +
+  geom_line(data = dublin_monthly, aes(x = time, y = filtered_level, color = "Dublin")) + 
+  geom_line(data = oriel_monthly, aes(x = time, y = filtered_level, color = "Oriel port")) +
+  theme_bw() + 
+  labs(x = 'Year',
+       y = 'Sea Level (m)') +
+  scale_x_date(date_breaks = "2 year", date_labels = "%Y") +
+   annotate(geom = "text",x=as.Date("2020-01-01"),
+    y=2,label="Port Oriel", size = 4, fontface="bold", color = "red") +
+   annotate(geom = "text",x=as.Date("2019-12-01"),
+    y=1.5,label="Howth harbor", size = 4, fontface="bold",color = "red") +
+  annotate(geom = "text",x=as.Date("2020-01-01"),
+    y=1,label="Dublin port", size = 4, fontface="bold",color = "red") +
+  annotate(geom = "text",x=as.Date("2020-01-01"),
+    y=0.5,label="Port Arklow", size = 4, fontface="bold",color = "red") +
+  theme(axis.title=element_text(size=15,face="bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1,size = 12)) 
+
+p + scale_color_manual(values=c("black", "black", "black", "black")) + theme(legend.position = "none")
+
+```
+
+*Figure 7: Monthly averages of sea level for the four tide gauges namely Port Oriel, Howth harbor, Dublin port and Port Arklow. *
+<!-- *figure 9: Daily averages of sea level for the four tide gauges namely Port Oriel, Howth harbor, Dublin port and Port Arklow.* -->
+<!-- \ -->
+
+<!-- According to figure 10, despite being noisy and having a few outliers,   -->
+
+The pairwise correlation coefficients (for the mutual time periods limited by data availability) for these datasets are calculated and given in Table 3. According to this table, the time series have relatively high correlations which was expected because of their proximity. However, the correlation coefficient between Dublin and Oriel tide gauges data is lower, possibly due to the gauges having less overlap.  
+
+*Table 3- Sea level correlogram.*
+
+\
+
+Due to high correlations between the datasets, it was possible to fill in the missing values using the available information provided by the recordings of the nearby tide gauges. For this purpose, each dataset was linearly regressed on another dataset with which it has the highest correlation coefficient, and doing so, missing values were replaced with the predicted values given by a linear model. The results are shown in Figure 8. 
+
+```{r}
+#Imputing missing values using LR: 
+names(ark_monthly)[2] <- "Arklow"
+names(dublin_monthly)[2] <-"Dublin"
+names(howth_monthly)[2] <- "Howth"
+names(oriel_monthly)[2] <- "Oriel"
+
+newData1 <- full_join(ark_monthly[,-3],dublin_monthly[,-3])
+newData1 <- full_join(newData1,howth_monthly[,-3])
+newData1 <- full_join(newData1, oriel_monthly[,-3])
+
+newData1 <-  dplyr::arrange(newData1, time)
+
+lm.howth <- lm(Howth ~ Arklow + time , data = newData1) 
+lm.arklow <- lm(Arklow ~  Howth + time, data = newData1)
+lm.dub <- lm(Dublin ~ Howth + time, data = newData1)
+lm.oriel <- lm(Oriel ~ Arklow + time, data = newData1)
+
+lm.od <- lm(Oriel ~ Dublin + time, data = newData1)
+lm.ad <- lm(Arklow ~ Dublin + time, data = newData1)
+lm.hd <- lm(Howth ~ Dublin + time, data = newData1)
+
+newData1$Howth[is.na(newData1$Howth)] <- predict(lm.howth, newdata = newData1[which(is.na(newData1$Howth)), ])
+
+newData1$Dublin[is.na(newData1$Dublin)] <- predict(lm.dub, newdata = newData1[which(is.na(newData1$Dublin)), ])
+
+newData1$Arklow[is.na(newData1$Arklow)] <- predict(lm.arklow, newdata = newData1[which(is.na(newData1$Arklow)), ])
+
+newData1$Oriel[is.na(newData1$Oriel)] <- predict(lm.oriel, newdata = newData1[which(is.na(newData1$Oriel)), ])
+
+newData1$Oriel[is.na(newData1$Oriel)] <- predict(lm.od, newdata = newData1[which(is.na(newData1$Oriel)), ])
+
+newData1$Arklow[is.na(newData1$Arklow)] <- predict(lm.ad, newdata = newData1[which(is.na(newData1$Arklow)), ])
+
+newData1$Howth[is.na(newData1$Howth)] <- predict(lm.hd, newdata = newData1[which(is.na(newData1$Howth)), ])
+
+d2 <- newData1
+
+d2 <- melt(d2, id.vars="time")
+names(d2)[2] <- "id"
+
+(p <- ggplot(
+  d2,
+  aes(time, value, group = id)) + geom_line() +
+    labs(x = "Year", y = "Sea Level (m)") +
+    theme_bw() + 
+    scale_x_date(date_breaks = "2 year", date_labels = "%Y") +
+   annotate(geom = "text",x=as.Date("2020-01-01"),
+    y=2,label="Port Oriel", size = 4, fontface="bold", color = "red") +
+   annotate(geom = "text",x=as.Date("2019-12-01"),
+    y=1.5,label="Howth harbor", size = 4, fontface="bold",color = "red") +
+  annotate(geom = "text",x=as.Date("2020-01-01"),
+    y=1,label="Dublin port", size = 4, fontface="bold",color = "red") +
+  annotate(geom = "text",x=as.Date("2020-01-01"),
+    y=0.5,label="Port Arklow", size = 4, fontface="bold",color = "red") +
+    theme(axis.title=element_text(size=15,face="bold"),
+          axis.text.x = element_text(angle = 45, hjust = 1, size = 12)) )
+```
+
+*Figure 8: Monthly averages of sea level for the four tide gauges namely Port Oriel, Howth harbor, Dublin port and Port Arklow, after imputing missing values via a linear regression model.*
+\
+
+Due to the proximity of the tide gauges, the time series should not deviate from each other. However, after 2016, Dublin port’s time series exhibits markedly different behaviour compared to the other gauges (Figure 9). This significant change of pattern could be considered an anomaly. For better visualization of the anomaly, Figure 10 shows all the time series plotted together.
+
+```{r}
+d2$value[d2$id == "Arklow"] <- d2$value[d2$id == "Arklow"] - 0.5
+d2$value[d2$id == "Dublin"] <- d2$value[d2$id == "Dublin"] - 1
+d2$value[d2$id == "Howth"] <- d2$value[d2$id == "Howth"] - 1.5
+d2$value[d2$id == "Oriel"] <- d2$value[d2$id == "Oriel"] - 2
+
+d2 <- na.omit(d2)
+rects <- data.frame(start= as.Date("2016-02-01"), end=as.Date("2019-03-01"))
+
+ggplot() +
+  geom_line(data = d2[which(d2$id != "Dublin"),],
+  aes(time, value, group = id)) + 
+  geom_line(data = d2[which(d2$id == "Dublin"),], aes(time,value), col = 'red') +
+    labs(x = "Year", y = "Sea Level (m)") +
+    theme_bw() + 
+    scale_x_date(date_breaks = "2 year", date_labels = "%Y") +
+    theme(axis.title=element_text(size=15,face="bold"),
+          axis.text.x = element_text(angle = 45, hjust = 1, size = 12)) +
+    guides(color =guide_legend(title="Location")) +
+    theme(legend.position = "top",axis.title=element_text(size=15,face="bold")) +
+    geom_rect(data=rects, inherit.aes=FALSE, aes(xmin=start, xmax=end, ymin=min(d2[,3], na.rm = T),
+                                               ymax=max(d2[,3], na.rm = T)), color="transparent", fill="yellow", alpha=0.3)
+
+```
+
+*Figure 9: Superimposed monthly averages of sea level for the four tide gauges namely Port Oriel, Howth harbor and Port Arklow (all in black), and Dublin port (In red). Note the divergeence during the yellow post-2016 period.*
+\
+
+In Figure 9, the highlighted region shows deviations from 2016 onwards in Dublin port’s time series relative to the other gauges. Accordingly, we decided to conduct no further analysis on Dublin port’s data for 2016-2019. However, before 2016, there is good agreement between Dublin port’s data and the data provided by the local tide gauges. Hence we feel the reliability of the data from Dublin port for the period 2003–2015 is acceptable. The rate of SLR and its confidence interval for 2003–2015 is calculated using a linear regression model which uses a simple standard form for regressing SL values on time. The rates are provided by the regression model outputting the slope coefficients in conjunction with the uncertainties around them. The results are given in Figure 10 for each location with 95% confidence intervals. While the estimations show similar rates of SLR in all the regions, Dublin port has the highest rate of 10 mm yr-1 and it's distinguishable from the rest. 
+
+```{r} 
+# Load in the data
+dub_all = read_csv('dub_all_1938_to_2016.csv')
+dub_ann = read_csv('dub_ann_1938_to_2017.csv')
+#Calculating SLC rate between 2003-2016:
+
+newData1 <- newData1 %>%  filter(year(time) >= 2003 & year(time) < 2016)
+df <- read_csv("/Users/amin/Desktop/PhD/Data/IrishSeaComplete.csv")
+
+df <- df %>%  filter(time > 2003 & time <2016)
+
+newData1$time <- df$time
+newData1 <- na.omit(newData1)
+newData1[,2:5] <- newData1[,2:5] * 1000
+
+lm.fit1 <- lm(Dublin ~ time, data = newData1)
+lm.fit4 <- lm(Arklow ~ time, data = newData1)
+lm.fit3 <- lm(Oriel ~ time, data = newData1)
+lm.fit2 <- lm(Howth ~ time, data = newData1)
+
+
+d=data.frame(location=c("Dublin port","Howth harbour","Oriel port", "Arklow"), 
+             mean=c(coefficients(lm.fit1)[2],coefficients(lm.fit2)[2],coefficients(lm.fit3)[2],coefficients(lm.fit4)[2]), 
+             lower=c(confint(lm.fit1)[2],confint(lm.fit2)[2],confint(lm.fit3)[2],confint(lm.fit4)[2]), 
+             upper=c(confint(lm.fit1)[4],confint(lm.fit2)[4],confint(lm.fit3)[4],confint(lm.fit4)[4]))
+
+(p1 <- ggplot() + 
+  geom_errorbarh(data= d, mapping=aes(y = location, x=upper, xmin=upper, xmax=lower), height=0.2, size=1, color="blue") + 
+  geom_point(data=d, mapping=aes(y=location, x=mean), size=4, shape=21, fill="white") +
+  theme_bw() +
+  labs(x = "SLR rate (mm yr-1)", y = NULL) +
+     theme(axis.title=element_text(size=15,face="bold")))
+```
+
+*Figure 10: SLR rate for each location with 95% confidence intervals. Despite the similarity between the rates, Dublin port appears to have a higher rate of SLR compared to that of the others.*
+
+
+# RESULTS
+This section focuses on evaluating the results of Dublin bay’s tide gauge data analyses in more detail. As it has been mentioned in the previous section, we have flagged Dublin port's data for 2016 onwards due to its poor agreement with other tide gauges. All the analyses provided in this section excludes that time period. 
+<!-- It should be noted that,as opposed to 2003 onwards, there is no alternative gauge records before 2003 for data validation of the previous years. -->
+
+### Dublin bay's SL analysis
+
+Figure 11 depicts Dublin port’s data from 1938 to 2015, including both monthly and yearly means. From the figure, it is possible to divide the series into two major periods; from 1938 to 1980 in which the SLR rate is 0.16 ($\pm$ 0.82) mm yr-1 with more regular patterns compared to the second major period from 1980 to 2015 in which the SLR rate is 6.2 ($\pm$ 0.95) mm yr-1 with higher variability. figure 12 shows the standard deviation of the monthly sea level in Dublin bay calculated for each decade. This chart confirms our observation that since 1980, decadal sea level variation has increased. 
+
+\vspace{5mm}
+
+```{r}
+# Just plot hte mean tide level
+rects <- data.frame(start=2003, end=2017)
+ggplot(dub_all, 
+       aes(x = dyear, y = mtl)) + 
+  geom_line(alpha = 0.7) + 
+  geom_line(data = dub_ann, aes(x = year, y = mtl), 
+            colour = 'red', size = 1.2) + 
+  theme_bw() + 
+  scale_x_continuous(breaks = seq(1940,2020,by = 10)) +
+  scale_y_continuous(breaks = seq(2.1,2.85,by = 0.1)) + 
+  geom_rect(data=rects, inherit.aes=FALSE, aes(xmin=start, xmax=end, ymin=min(2.1, na.rm = T),
+                  ymax=max(2.85, na.rm = T)), color="transparent", fill="green", alpha=0.3) +
+  labs(x = 'Year',
+       y = 'Sea Level (m)') +
+   theme(axis.title=element_text(size=15,face="bold"))
+``` 
+
+*Figure 11: Monthly average of sea level at Dublin bay (black) with its annual average superimposed (red).The green band shows the data that has been validated by comparing to other local tide gauges.*
+
+\
+
+```{r}
+#Calculating SL rates:
+dub_old<- dub_all %>% filter(dyear < 1980)
+dub_old_ann <- dub_old %>% group_by(dyear = floor(dyear)) %>% summarise_all(funs(mean))
+dubold.fit <- lm(msl ~ dyear, data = dub_old_ann)
+
+dub_new<- dub_all %>% filter(dyear >= 1980 & dyear < 2016)
+dub_new_ann <- dub_new %>% group_by(dyear = floor(dyear)) %>% summarise_all(funs(mean))
+dubnew.fit <- lm(msl ~ dyear, data = dub_new)
+
+dubold_rate <- dubold.fit$coefficients[2] * 1000
+dubnew_rate <- dubnew.fit$coefficients[2] * 1000
+```
+
+
+\vspace{5mm}
+
+
+```{r}
+#Dividing into decades:
+dub_4050<- dub_all %>% filter(dyear < 1950)
+dub_5060<- dub_all %>% filter(dyear < 1960 & dyear >= 1950)
+dub_6070<- dub_all %>% filter(dyear < 1970 & dyear >= 1960)
+dub_7080<- dub_all %>% filter(dyear < 1980 & dyear >= 1970)
+dub_8090<- dub_all %>% filter(dyear < 1990 & dyear >= 1980)
+dub_902000<- dub_all %>% filter(dyear < 2000 & dyear >= 1990)
+dub_20002010<- dub_all %>% filter(dyear < 2010 & dyear >= 2000)
+dub_20102020<- dub_all %>% filter(dyear < 2016 & dyear >= 2010)
+
+#Calculating Standard deviation for each decade:
+SD <- c(sd(dub_4050$msl), sd(dub_5060$msl),sd(dub_6070$msl),sd(dub_7080$msl),sd(dub_8090$msl,na = T),sd(dub_902000$msl,na = T),sd(dub_20002010$msl,na = T),sd(dub_20102020$msl, na = T))
+
+SD_table <- as.data.frame(c("1940-1950", "1950-1960","1960-1970","1970-1980","1980-1990","1990-2000","2000-2010","2010-2015"))
+names(SD_table)[1] <- "year"
+SD_table$sd <-  SD
+ggplot(SD_table, aes(year, sd)) + 
+     geom_bar(stat="identity", width = 0.5) +
+     theme_bw() +
+  labs(x = "Year", y = 'Standard deviation (m)') +
+  theme(axis.title=element_text(size=15,face="bold"), axis.text.x = element_text(angle = 45, hjust = 1))
+``` 
+*Figure 12: Sea level decadal standard deviation of Dublin port. A clear increase during the 1980s is visible and persists to the present day.* 
+\
+
+```{r}
+#dub_all_ann <- dub_all %>% group_by(dyear = floor(dyear)) %>% summarise_all(funs(mean))
+dub_all2 <- dub_all %>% filter(dyear < 2016)
+duball.fit <- lm(msl ~ dyear, data = dub_all2)
+
+duball_rate <- duball.fit$coefficients[2] * 1000
+```
+
+From the time series, it was possible to identify different sea level rates for different decades. These rates, displayed in Figure 13, indicate that the sea level rate is positive for some periods and negative for the others. Overall, from 1938 to 2015, the estimated SLR rate is 1.67 ($\pm$ 0.29) mm yr-1 which is in agreement with the 1.6 ($\pm$ 0.4) mm yr-1 of the global sea level rise estimate of @Dangendorf2019 for 1900-2015.
+
+```{r}
+dub_imp <- as.data.frame(newData1[,c(1,3)])
+dub_imp <- na.omit(dub_imp)
+
+SD_table$rates <- c(3.88,1.88,-2.43,-2.88,19.17,-6.39,14.88,9.26)
+names(SD_table)[1] <- "year"
+
+(p1 <- ggplot(SD_table, aes(year, rates)) + 
+  geom_bar(stat="identity", width = 0.5) +
+  theme_bw() +
+  labs(x = "Year", y = 'SLR (mm yr-1)') +
+  theme(axis.title=element_text(size=15,face="bold"),
+        axis.text.x = element_text(angle = 45, hjust = 1, size = 12)))
+```
+*Figure 13: Decadal rate of sea level rise in Dublin.*
+
+To estimate continuous rates of SLR, a non-linear curve was fitted to the monthly average sea level data using P-Splines [@Hastie2006]. These continuous functions can be differentiated to enable rate calculations. We used the open-source R package mgcv [@Wood2017]. The results are shown in Figure 14. We can see that the rate of SLR shows a cyclic behavior, changing sign from negative to positive and vice versa. However, the amplitude of the cycles gets bigger after 1980 reaching 20 mm yr-1 at a certain point in time during 80’s. For the time period that we were able to validate the data (highlighted in the figure), the sign of SLR never becomes negative; i.e. sea level is constantly rising in that period.
+
+```{r}
+dub_all = read_csv('dub_all_1938_to_2016.csv')
+dub = read_csv('dub_ann_1938_to_2017.csv')
+
+dub$mtl <- dub$mtl + 0.05
+# Create rates - using mgcv
+m <- gam(mtl ~ s(year, k = 50),
+         data = dub)
+source('https://gist.githubusercontent.com/gavinsimpson/e73f011fdaaab4bb5a30/raw/4cf44afb401e715548e3b2fedb4cb7d30976c8df/Deriv.R')
+newdat = data.frame(year = dub$year)
+m.d <- Deriv(m, newdata = newdat)
+m.dci <- confint(m.d)
+dub$mm_per_year = as.vector(m.d$year$deriv * 1000)
+#Plot the rates:
+rects <- data.frame(start=2003, end=2016)
+p1 <-ggplot(dub, aes(year, mm_per_year)) + geom_line() + theme_bw() + labs(x = NULL, y = "SLR (mm yr-1)") +
+  geom_rect(data=rects, inherit.aes=FALSE, aes(xmin=start, xmax=end, ymin=min(dub[,5], na.rm = T),
+                                               ymax=max(dub[,5], na.rm = T)), color="transparent", fill="green", alpha=0.3) +
+  theme(axis.title=element_text(size=15,face="bold"))
+
+
+y <- predict(m, newdata = dub)
+x <- as.data.frame(cbind(dub$year,y))
+names(x) <-c("year","mtl")
+
+
+p2 <- ggplot() + geom_line(data = dub_all, aes(dyear,msl)) + 
+            geom_line(data = x, aes(year,mtl), color = "red", size = 1.2) +
+            theme_bw() +
+            labs(x = 'Year', y = 'Sea Level (m)') +
+            geom_rect(data=rects, inherit.aes=FALSE, aes(xmin=start, xmax=end, ymin=min(dub_all[,3], na.rm = T),
+                  ymax=max(dub_all[,3], na.rm = T)), color="transparent", fill="green", alpha=0.3) +
+   theme(axis.title=element_text(size=15,face="bold"))
+  
+  
+figure1 <- multi_panel_figure(columns = 1, rows = 2, panel_label_type = "none")
+figure1 %<>%
+  fill_panel(p2, column = 1, row = 1) %<>%
+  fill_panel(p1, column = 1, row = 2)
+
+figure1
+```
+*Figure 14: The non-linear curve fitted to Dublin's monthly sea level data in red (at the top), the continuous rate of SLR at Dublin port from 1938 to 2015 (at the bottom), .*
+
+
+# Discussion
+
+Taken over the full time period of observations, 1938–2016, sea level rise in Dublin of 1.7 mm yr-1 is consistent with global mean sea level trends over the 20th century [@Dangendorf2019]. Rates of rise lower than this figure for earlier periods [@Carter1982; @Woodworth1991; @Woodworth1991] are consistent with the findings here and were lower due to the decades of larger sea level rise and variability (1980s, 2000s) not being included in the trend estimation. Elsewhere in Ireland, Orford, Murdy, and Freel (2006) investigated tide gauge records in Malin Head (1958 - 1998) and Belfast harbor (1918 - 2002) where they reported substantial annual variation for both sites with overall falling trends of -0.2 mm yr-1 for Belfast and -0.16 mm yr -1 for Malin Head. Both Belfast and Malin Head, being in the north of the country, are in regions of Glacial Isostatic Uplift, which will reduce relative sea level rise there [@Bradley2011]. However, Dublin is in a region of neutral Glacial Isostatic Uplift so these long term effects of post-glacial land motion should be negligible and hence greater consistency with the global figure is expected and ultimately found.
+
+More surprising is the large decadal variability revealed. According to our analyses, higher sea level variances have been observed at Dublin port since 1980 onwards as opposed to the previous decades. Furthermore, fitting a non-linear curve using P-Splines to the sea level monthly measurements, a continuous SLR rate plot is provided which shows a cyclic pattern for the rates. This study has found a rate of sea level rise for Dublin of 10 mm/year for the period 2003–2015 and found that this rate was exceeded during the 1980s when sea level in Dublin Port rose at rates of up to 20 mm/year. The decadal recurrence of increased sea level rise points to potentially cyclical behaviour in Dublin sea level. Ireland sits on the edge of the Atlantic, greatly influenced by decadal patterns of climate such as Atlantic Multidecadal Variaibliy [@McCarthy2015] and decadal variations in the strength of the North Atlantic Oscillation [@McCarthy2018]. Similar patterns of decadal variability in sea level to Dublin were noted in Belfast by @Orford2015 and tenuously linked to decadal variation of the North Atlantic Oscillation. This would seem a likely explanation for similar patterns in Dublin. However, a full investigation of the causes of decadal variability in Dublin sea level remains for future investigation. 
+
+It is important to note that the amplitude of the cycles increases after 1980 and it has never become negative since 2003 indicating a continuous upward trend. The increased rate of sea level rise since 2000 has been more persistent than the elevated rate of rise during the 1980s and is also greater than the rates of rise in Howth, Port Oriel, and Arklow. This raises the question of whether other factors might have been involved in this higher rate of SLR in Dublin Port such as tidal changes in the Liffey estuary or local land motion. 
+
+Tidal changes were investigated in the high frequency data from 2007–2016 using a Matlab implementation of TIRA analysis [@Williams]. The tides in Dublin are dominated by semi-diurnal components, with M2 having an amplitude of 1.36 m. Semidiurnal amplitudes of S2, N2, K2 have amplitudes of 0.40 m, 0.27 m, 0.11 m respectively. Diurnal constituents K1 and O1 both have amplitudes of 11 cm. A significant contribution of M4 with an amplitude of 10 cm gives Dublin it’s distinct asymmetry of water levels. None of the amplitudes (phases) of these components vary by more than 1 cm (3º) from 2007–2016 (Table S1). This is perhaps unsurprising given that little modification to the port occurred over this time (Fig. S1) and is certainly not enough change to explain MSL trends of up to 1 cm yr-1.
+
+Local land subsidence could increase rates of relative sea level rise. Leveling information for the Dublin Port tide gauge, levels were taken at the primary tide gauge benchmark. The original leveling took place in 2006 using a GPS accurate to $\pm$ 0.0045 m. Field measurements were taken at intermediate times by Dublin City Council, the last of which was in 2018. Finally, fieldwork as part of this project found a level in 2019. The measurements do not support subsidence. In fact, they support the opposite indicating a 2.86 mm yr-1 uplift. The representativeness of these measurements of long term subsidence is questionable. Spot measurements do not take account of tidal loading or other short-lived land motion effects. Further observations would be necessary to fully determine the role of subsidence in the recent elevated rates of SLR in Dublin Port.
+
+
+# CONCLUSION
+
+This study has evaluated sea level trends in Dublin Port using various sources of tide gauge data. A merged and reconciled dataset has been investigated from 1938–2016. The measurements of the Dublin Port’s tide gauge between 2003 and 2015 were validated against sea level from the three tide gauges located at Port Oriel, Howth harbor, and Port Arklow. These tide gauges are close to Dublin Port with being maximum 60 km away and their recordings are in good agreement with the interannual variation Dublin port’s sea level data between 2003-2015. 
+
+Mean sea level in Dublin 13 cm higher at the end in 2016 than in 1938. However, due to a combination of accelerating rates of global mean sea level rise and large decadal variability, the rates of rise from 2003–2015 of 10 mm yr-1 result in a comparable mean sea level rise of 12 cm over this much shorter period of time. Dublin City Council (2005) estimated return periods of extreme high-water levels in Dublin based on the joint probability method [e.g. @pugh1987]. Based on their results, an increase of 13 cm, assuming extreme values statistics do not change, will lead to a flooding event that had a 1 in 50 year return period would now have a return period of 1 in 25 years, and a 1 in 10 year event would now have a return period of 1 in 4 years. The extreme high waters of the 1st February 2002, that resulted in extreme flooding in the Clontarf area, was a 1 in 60 year event [@dcc], which could reasonably have been previously considered a once in a lifetime event. Mean sea level rise in Dublin since this time means that this level of water is now expected to occur 3 times in the average lifetime.
+
+Dublin City Council have recently increased the coastal defences in Dublin, allowing for between 40 and 65 cm of mean sea level rise (@connell, Greater Dublin Strategic Drainage Programme, 2005). Projections of sea level rise for Dublin, based on UKCP18 [@Fung2018], depend heavily on greenhouse gas emissions trajectories. By 2100, Dublin mean sea level is projected to rise by 0.6 m at the 50th percentile (1.0 m at the 95th percentile) under an RCP8.5 scenario and 0.3 m at the 50th percentile level (0.6 m at the 95th percentile level) under an RCP2.6 (Paris Agreement) scenario. These projections do not simulate the decadal scale variability reported here, similar to many other decadal climate phenomena. Current rates of rise in Dublin of 10 mm yr-1 also outstrip the projections. Understanding the origin and duration of the decadal fluctuations in mean sea level in Dublin is crucial for preparation and defence of Ireland’s capital city in the coming decades. 
+
+# REFERENCES
+\
