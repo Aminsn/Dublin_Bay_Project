@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = FALSE,
                       fig.align = "center")
 ```
 
-# RECENT RAPID SEA LEVEL RISE IN DUBLIN BAY BASED ON TIDE GAUGE ANALYSIS
+# RECENT SEA LEVEL RISE ON IRELAND’S EAST COAST BASED ON MULTIPLE TIDE GAUGE ANALYSIS
 
 # ABSTRACT
 
@@ -82,10 +82,10 @@ library(magrittr)
 library(multipanelfigure)
 
 rm(list = ls())
-setwd("/Users/amin/Desktop/PhD")
+
 # load the two processed datasets
-dub.ntgn = read.csv('Data/dub_mon_2007_to_2018.csv',header=TRUE)
-dub.andy = read.csv('Data/dub_mon_2002_to_2010.csv',header=TRUE)
+dub.ntgn = read.csv('dub_mon_2007_to_2018.csv',header=TRUE)
+dub.andy = read.csv('dub_mon_2002_to_2010.csv',header=TRUE)
 
 # can get the first datum offset at this stage
 dub.mod.merge <- merge(dub.ntgn,dub.andy,by=c("dyear"),all.x=FALSE,all.y=FALSE)
@@ -109,7 +109,7 @@ The vertical difference of 2.599 m between NTGN ODM and Port Authority LAT can b
 Figure 3 depicts how Dublin’s SL data from different sources are aggregated. No overlaps exist between the Port Authority dataset and the earlier tabulated data. The HW dataset overlaps both but, due to the low vertical resolution of the Port Authority dataset, cannot be used to relate datums. We can however use it to bridge the gap to the NTGN dataset.
 
 ```{r}
-dub.highs = read.csv('Data/All_data.csv')
+dub.highs = read.csv('All_data.csv')
 
 dub.highs$Date <- as.POSIXlt(dub.highs$Date, format = "%d/%m/%Y")
 dub.highs$Year <- dub.highs$Date$year + 1900
@@ -126,7 +126,7 @@ dub.nhw <- aggregate(Height~Month+Year,dub.highs,length)
 dub.mhw$nhw <- dub.nhw$Height
 
 # load the long data
-dub.long <- read.csv('Data/Digitised_1990_2001_GDM.csv',header=TRUE)
+dub.long <- read.csv('Digitised_1990_2001_GDM.csv',header=TRUE)
 names(dub.long) <- c("month","year","mhw","mlw","mtl")
 dub.long[dub.long$mtl==-99999,3:5] <- NA
 dub.long$dyear <- dub.long$year + (dub.long$month-.5)/12
@@ -213,7 +213,7 @@ dub.merge.ann <- aggregate(cbind(mhw,mlw,mtl)~year,dub.merge.final,
 
 
 # load the long one now
-dub.tab = read.csv("Data/tabulated_data_1938_to_2001.csv")
+dub.tab = read.csv("tabulated_data_1938_to_2001.csv")
 names(dub.tab) <- c("year","mtl","mhw","mlw")
 dub.tab[,2:4] <- dub.tab[,2:4]/1000 # convert to m
 dub.tab <- dub.tab[dub.tab$year<1987,c("year","mhw","mlw","mtl")] #re-order, remove post 87
@@ -251,11 +251,11 @@ Each of these datasets and Dublin NTGN data were linearly interpolated to hourly
 \vspace{5mm}
 
 ```{r}
-arklow <- read.delim("Data/arklow.txt", stringsAsFactors=FALSE)
-port_oriel <- read.delim("Data/port_oriel.txt", stringsAsFactors=FALSE)
-dublin_port <- read_csv("Data/dublin_port_20191008.csv")
-howth_harbour <- read_csv("Data/howth_harbour.csv")
-dublin_1987 <- read_csv("Data/dub_mon_1987_to_2017.csv")
+arklow <- read.delim("arklow.txt", stringsAsFactors=FALSE)
+port_oriel <- read.delim("port_oriel.txt", stringsAsFactors=FALSE)
+dublin_port <- read_csv("dublin_port_20191008.csv")
+howth_harbour <- read_csv("howth_harbour.csv")
+dublin_1987 <- read_csv("dub_mon_1987_to_2017.csv")
 
 arklow$Quality <- NULL
 port_oriel$Quality <- NULL
@@ -605,7 +605,7 @@ dub_ann = read_csv('dub_ann_1938_to_2017.csv')
 #Calculating SLC rate between 2003-2016:
 
 newData1 <- newData1 %>%  filter(year(time) >= 2003 & year(time) < 2016)
-df <- read_csv("/Users/amin/Desktop/PhD/Data/IrishSeaComplete.csv")
+df <- read_csv("IrishSeaComplete.csv")
 
 df <- df %>%  filter(time > 2003 & time <2016)
 
